@@ -22,10 +22,9 @@ for _ in range(m):
             else:
                 switch(y-i)
                 switch(y+i)
-
+    print(arr)
 for i in range(1, n+1):
     print(arr[i], end = ' ')
-    if i % 20 == 0 :
+    if i % 20 == 0:
         print()
 
-        
