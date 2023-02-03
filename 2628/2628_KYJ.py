@@ -1,9 +1,7 @@
-# import sys
-# sys.stdin = open('input.txt', 'r')
 def Cut(x, y, cutN, cut_list):
     cut_x = [0] # [4]
     cut_y = [0] # [3, 2]
-    # print(cutN, cut_list)
+
     for i in range(cutN): # 자르는 값들 x, y 끼리 리스트에 넣기
         if cut_list[i][0] == 0: # 가로로 자를 때
             cut_y.append(cut_list[i][1]) # y에 추가
@@ -12,9 +10,6 @@ def Cut(x, y, cutN, cut_list):
 
     cut_x.sort(reverse=True) # 내림차순 정렬
     cut_y.sort(reverse=True)
-    #x, y = 10, 10
-    # cutN = 1, cut_list = [0, 1]
-    #
 
     if cut_x and cut_y:
         # 가장 긴 길이 초기값 = 양 끝에 자르기 직전까지 거리 중 긴 것
