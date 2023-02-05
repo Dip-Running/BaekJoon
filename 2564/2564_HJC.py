@@ -1,5 +1,5 @@
-# import sys
-# sys.stdin = open("input.txt","rt")
+import sys
+sys.stdin = open("input.txt","rt")
 # ====================================
 import sys
 width, height = map(int,input().split())
@@ -21,10 +21,10 @@ for _ in range(n+1):
         direction, distance = map(int,input().split())
     else:       # 나머지는 가게 좌표
         store.append(list(map(int,input().split())))
-
+print(store, direction, distance)
 total = 0
 dist1 = calcDist(direction, distance) #동근이의 거리
-# print(dist1)
+print(dist1)
 for i in range(n): # 이게 문제임
     dist2 = calcDist(store[i][0], store[i][1]) #각 상점의 거리
     path1 = abs(dist1 - dist2)  # 시계방향으로 돌았을 때 거리 절댓값
