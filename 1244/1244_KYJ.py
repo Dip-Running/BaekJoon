@@ -16,14 +16,18 @@ for i in range(member):
 
     if x == 1: # 남자일 경우
         Turn(y)
-        Turn(y * 2)
+        Turn(y * 2) # 배수 전부 바꾸기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
     else: # 여자일 경우
         Turn(y)
         for i in range(total // 2): # 최대 전체의 절반
             if y + i > total or y - i < 1 : break # 범위 벗어나면 break
-            if switches[y - 1 - i] == switches[y + 1 + i]: # 앞, 뒤 비교
-                Turn(y - 1 - i) # 같으면 변경
-                Turn(y + 1 + i) # 같으면 변경
+            # if switches[y - 1 - i] == switches[y + 1 + i]: # 앞, 뒤 비교
+            #     Turn(y - 1 - i) # 같으면 변경
+            #     Turn(y + 1 + i) # 같으면 변경
+            if switches[y - i] == switches[y + i]: # 앞, 뒤 비교
+                Turn(y - i) # 같으면 변경
+                Turn(y + i) # 같으면 변경
             else:
                 break # 같지 않을 때 break
 
